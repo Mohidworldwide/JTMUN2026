@@ -10,6 +10,10 @@
 
 <style>
 
+/* =========================
+   RESET
+========================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -27,6 +31,7 @@ body {
     padding: 0 6% 100px;
     overflow-x: hidden;
 }
+
 
 /* =========================
    BACKGROUND
@@ -60,25 +65,30 @@ body::after {
 
 @keyframes floatOne {
 
-    0%,100% {
+    0%,
+    100% {
         transform: translate(0,0) rotate(0deg);
     }
 
     50% {
         transform: translate(-35px,30px) rotate(8deg);
     }
+
 }
 
 @keyframes floatTwo {
 
-    0%,100% {
+    0%,
+    100% {
         transform: translate(0,0);
     }
 
     50% {
         transform: translate(40px,-30px);
     }
+
 }
+
 
 /* =========================
    HEADER
@@ -102,9 +112,13 @@ body::after {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
-/* LOGO */
+
+/* =========================
+   LOGO
+========================= */
 
 .logo-wrap {
     display: flex;
@@ -123,9 +137,11 @@ body::after {
     width: 58px;
     height: 58px;
     border: 1px solid rgba(255,255,255,0.25);
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     font-size: 18px;
     letter-spacing: 2px;
 }
@@ -135,6 +151,11 @@ body::after {
     letter-spacing: 4px;
     color: #9ba8b6;
 }
+
+
+/* =========================
+   BACK BUTTON
+========================= */
 
 .back {
     display: inline-block;
@@ -148,6 +169,11 @@ body::after {
     color: white;
     transform: translateX(-5px);
 }
+
+
+/* =========================
+   HERO TEXT
+========================= */
 
 .eyebrow {
     color: #8493a5;
@@ -168,6 +194,7 @@ h1 {
     font-size: 18px;
 }
 
+
 /* =========================
    CONTAINER
 ========================= */
@@ -176,6 +203,7 @@ h1 {
     max-width: 1100px;
     margin: auto;
 }
+
 
 /* =========================
    FORM SECTIONS
@@ -199,6 +227,7 @@ h2 {
     letter-spacing: -1px;
     margin-bottom: 35px;
 }
+
 
 /* =========================
    INPUTS
@@ -240,6 +269,7 @@ select option {
     background: #080b0f;
 }
 
+
 /* =========================
    GRID
 ========================= */
@@ -250,22 +280,27 @@ select option {
     gap: 22px;
 }
 
+
 /* =========================
-   REQUIREMENT
+   REQUIREMENT BOX
 ========================= */
 
 .requirement {
     margin: 25px 0 35px;
     padding: 20px;
+
     border-left: 2px solid #b9cde0;
+
     color: #8f9baa;
     line-height: 1.7;
+
     background: rgba(255,255,255,0.015);
 }
 
 .requirement strong {
     color: #e7eef6;
 }
+
 
 /* =========================
    DELEGATE CONTROLS
@@ -288,11 +323,16 @@ select option {
 .small-button {
     width: 48px;
     height: 48px;
+
     border: 1px solid #536171;
     background: transparent;
+
     color: white;
+
     cursor: pointer;
+
     font-size: 22px;
+
     transition: 0.25s;
 }
 
@@ -302,15 +342,20 @@ select option {
     transform: scale(1.05);
 }
 
+
 /* =========================
    DELEGATE CARD
 ========================= */
 
 .delegate-card {
     border: 1px solid rgba(255,255,255,0.09);
+
     padding: 30px;
+
     margin-bottom: 18px;
+
     background: rgba(255,255,255,0.015);
+
     animation: delegateIn 0.45s ease;
 }
 
@@ -325,6 +370,7 @@ select option {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
+
 }
 
 .delegate-title {
@@ -340,36 +386,15 @@ select option {
 
 .head-badge {
     padding: 7px 11px;
+
     background: #eaf4ff;
     color: #05070a;
+
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
-/* =========================
-   COMPULSORY COMMITTEE
-========================= */
-
-.committee-note {
-    margin-top: 10px;
-    color: #788696;
-    font-size: 12px;
-    line-height: 1.5;
-}
-
-.compulsory-label {
-    display: inline-block;
-    margin-top: 8px;
-    padding: 5px 9px;
-    border: 1px solid rgba(234,244,255,0.15);
-    border-radius: 999px;
-    background: rgba(234,244,255,0.04);
-    color: #aebed0;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
 
 /* =========================
    BUTTON
@@ -377,19 +402,28 @@ select option {
 
 .button {
     border: none;
+
     padding: 19px 30px;
+
     background: #eaf4ff;
     color: #05070a;
+
     font-weight: 800;
     letter-spacing: 2px;
+
     cursor: pointer;
+
     font-size: 15px;
+
     transition: 0.3s;
 }
 
 .button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(200,225,255,0.12);
+
+    box-shadow:
+        0 15px 35px
+        rgba(200,225,255,0.12);
 }
 
 .button:disabled {
@@ -398,6 +432,7 @@ select option {
     transform: none;
 }
 
+
 /* =========================
    MESSAGE
 ========================= */
@@ -405,8 +440,11 @@ select option {
 .message {
     margin-top: 25px;
     padding: 20px;
+
     display: none;
+
     border: 1px solid rgba(255,255,255,0.12);
+
     line-height: 1.6;
 }
 
@@ -419,6 +457,7 @@ select option {
     display: block;
     color: #c4e7cc;
 }
+
 
 /* =========================
    REVIEW
@@ -434,7 +473,10 @@ select option {
 
 .review-line {
     padding: 20px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+
     color: #a3afbd;
 }
 
@@ -444,7 +486,10 @@ select option {
 
 .review-delegate {
     padding: 20px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.06);
+
     font-size: 17px;
     line-height: 1.7;
 }
@@ -455,10 +500,12 @@ select option {
 
 .review-buttons {
     margin-top: 35px;
+
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
 }
+
 
 /* =========================
    SUCCESS SCREEN
@@ -474,24 +521,32 @@ select option {
 .success-mark {
     width: 90px;
     height: 90px;
+
     border: 1px solid #d9e9f8;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     margin: 0 auto 30px;
+
     font-size: 35px;
-    animation: successPulse 1.5s ease infinite;
+
+    animation:
+        successPulse 1.5s ease infinite;
 }
 
 @keyframes successPulse {
 
-    0%,100% {
+    0%,
+    100% {
         transform: scale(1);
     }
 
     50% {
         transform: scale(1.08);
     }
+
 }
 
 #successScreen h2 {
@@ -502,6 +557,7 @@ select option {
     color: #9ba8b6;
     line-height: 1.7;
 }
+
 
 /* =========================
    MOBILE
@@ -539,6 +595,11 @@ select option {
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header class="header">
 
     <div class="logo-wrap">
@@ -563,6 +624,7 @@ select option {
 
     </div>
 
+
     <a
         href="index.html"
         class="back"
@@ -570,13 +632,16 @@ select option {
         ← Back to JTMUN XII
     </a>
 
+
     <div class="eyebrow">
         SCHOOL REGISTRATION
     </div>
 
+
     <h1>
         Register a Team.
     </h1>
+
 
     <p class="subtitle">
         Each team is registered separately.
@@ -589,7 +654,7 @@ select option {
 
 
 <!-- =========================
-     SCHOOL
+     SCHOOL INFORMATION
 ========================= -->
 
 <section class="form-section">
@@ -602,9 +667,12 @@ select option {
         School Information
     </h2>
 
+
     <div class="field">
 
-        <label>School Name</label>
+        <label>
+            School Name
+        </label>
 
         <input
             id="schoolName"
@@ -618,7 +686,9 @@ select option {
 
     <div class="field">
 
-        <label>Team Name</label>
+        <label>
+            Team Name
+        </label>
 
         <input
             id="teamName"
@@ -631,7 +701,9 @@ select option {
 
     <div class="field">
 
-        <label>Faculty Advisor</label>
+        <label>
+            Faculty Advisor
+        </label>
 
         <input
             id="facultyAdvisor"
@@ -646,7 +718,9 @@ select option {
 
         <div class="field">
 
-            <label>Contact Email</label>
+            <label>
+                Contact Email
+            </label>
 
             <input
                 id="facultyEmail"
@@ -659,7 +733,9 @@ select option {
 
         <div class="field">
 
-            <label>Contact Number</label>
+            <label>
+                Contact Number
+            </label>
 
             <input
                 id="facultyContact"
@@ -688,21 +764,34 @@ select option {
         Delegation
     </h2>
 
+
     <div class="requirement">
 
         A delegation must contain between
-        <strong>6 and 9 delegates</strong>.
+        <strong>6 and 10 delegates</strong>.
 
         The first delegate registered will be the
         <strong>Head Delegate</strong>.
 
-        Each delegate must be assigned a different committee.
+        Each delegate must be assigned a committee.
 
         <br><br>
 
-        <strong>Compulsory committees:</strong>
-        United Nations Security Council (UNSC)
-        and Global Crisis Cabinet.
+        <strong>
+            United Nations Security Council (UNSC)
+        </strong>
+
+        is a compulsory dual-delegate committee and
+        must have <strong>exactly 2 delegates</strong>.
+
+        <br><br>
+
+        <strong>
+            Global Crisis Cabinet
+        </strong>
+
+        is compulsory and must have
+        <strong>exactly 1 delegate</strong>.
 
     </div>
 
@@ -717,12 +806,14 @@ select option {
             −
         </button>
 
+
         <div
             class="delegate-count"
             id="delegateCount"
         >
             6 Delegates
         </div>
+
 
         <button
             type="button"
@@ -740,17 +831,30 @@ select option {
 
     <div class="requirement">
 
-        <strong>Committee rules</strong><br><br>
-
-        Every delegation must include:
-
-        <strong>UNSC</strong> and
-        <strong>Global Crisis Cabinet</strong>.
+        <strong>
+            Committee Requirements
+        </strong>
 
         <br><br>
 
-        No two delegates from the same team may select
-        the same committee.
+        Every delegation must include:
+
+        <br><br>
+
+        • <strong>
+            2 delegates in United Nations Security Council (UNSC)
+        </strong>
+
+        <br>
+
+        • <strong>
+            1 delegate in Global Crisis Cabinet
+        </strong>
+
+        <br><br>
+
+        All other committees may only have
+        <strong>one delegate per team</strong>.
 
     </div>
 
@@ -770,6 +874,7 @@ select option {
     >
         REVIEW REGISTRATION
     </button>
+
 
     <div
         id="message"
@@ -792,14 +897,17 @@ select option {
         03 / REVIEW
     </div>
 
+
     <h2>
         Registration Review
     </h2>
+
 
     <div
         id="reviewBox"
         class="review-box"
     ></div>
+
 
     <div class="review-buttons">
 
@@ -810,6 +918,7 @@ select option {
         >
             EDIT
         </button>
+
 
         <button
             type="button"
@@ -837,9 +946,11 @@ select option {
         ✓
     </div>
 
+
     <h2>
         Registration Received
     </h2>
+
 
     <p id="successText">
         Your registration has been received.
@@ -853,7 +964,7 @@ select option {
 <script>
 
 /* ==================================================
-   GOOGLE APPS SCRIPT
+   GOOGLE APPS SCRIPT API
 ================================================== */
 
 const SCRIPT_URL =
@@ -887,17 +998,12 @@ const COMMITTEES = [
 ];
 
 
-/* ==================================================
-   COMPULSORY COMMITTEES
-================================================== */
+const UNSC =
+    "United Nations Security Council (UNSC)";
 
-const COMPULSORY_COMMITTEES = [
 
-    "United Nations Security Council (UNSC)",
-
-    "Global Crisis Cabinet"
-
-];
+const GLOBAL_CRISIS =
+    "Global Crisis Cabinet";
 
 
 /* ==================================================
@@ -914,9 +1020,13 @@ let delegateCount = 6;
 function renderDelegates() {
 
     const container =
-        document.getElementById("delegatesContainer");
+        document.getElementById(
+            "delegatesContainer"
+        );
+
 
     container.innerHTML = "";
+
 
     for (
         let i = 0;
@@ -927,17 +1037,22 @@ function renderDelegates() {
         const card =
             document.createElement("div");
 
-        card.className = "delegate-card";
+
+        card.className =
+            "delegate-card";
+
 
         const title =
             i === 0
                 ? "Head Delegate"
                 : "Delegate " + (i + 1);
 
+
         const badge =
             i === 0
                 ? `<span class="head-badge">HEAD DELEGATE</span>`
                 : "";
+
 
         card.innerHTML = `
 
@@ -1016,39 +1131,31 @@ function renderDelegates() {
                     </option>
 
                     ${COMMITTEES.map(
-                        committee => {
-
-                            const isCompulsory =
-                                COMPULSORY_COMMITTEES.includes(
-                                    committee
-                                );
-
-                            return `
-                                <option value="${committee}">
-                                    ${isCompulsory ? "⭐ " : ""}
-                                    ${committee}
-                                    ${isCompulsory ? " — COMPULSORY" : ""}
-                                </option>
-                            `;
-
-                        }
+                        committee =>
+                            `<option value="${committee}">
+                                ${committee}
+                            </option>`
                     ).join("")}
 
                 </select>
-
-                <div class="committee-note">
-                    ⭐ UNSC and Global Crisis Cabinet are compulsory.
-                </div>
 
             </div>
 
         `;
 
-        container.appendChild(card);
+
+        container.appendChild(
+            card
+        );
+
     }
 
-    document.getElementById("delegateCount").textContent =
+
+    document.getElementById(
+        "delegateCount"
+    ).textContent =
         delegateCount + " Delegates";
+
 }
 
 
@@ -1058,7 +1165,9 @@ function renderDelegates() {
 
 function addDelegate() {
 
-    if (delegateCount >= 10) {
+    if (
+        delegateCount >= 10
+    ) {
 
         showMessage(
             "A delegation can have a maximum of 10 delegates.",
@@ -1066,11 +1175,14 @@ function addDelegate() {
         );
 
         return;
+
     }
+
 
     delegateCount++;
 
     renderDelegates();
+
 }
 
 
@@ -1080,7 +1192,9 @@ function addDelegate() {
 
 function removeDelegate() {
 
-    if (delegateCount <= 6) {
+    if (
+        delegateCount <= 6
+    ) {
 
         showMessage(
             "A delegation must have at least 6 delegates.",
@@ -1088,88 +1202,116 @@ function removeDelegate() {
         );
 
         return;
+
     }
+
 
     delegateCount--;
 
     renderDelegates();
+
 }
 
 
 /* ==================================================
-   GET DATA
+   GET REGISTRATION DATA
 ================================================== */
 
 function getRegistrationData() {
 
     const delegates = [];
 
+
     const cards =
-        document.querySelectorAll(".delegate-card");
+        document.querySelectorAll(
+            ".delegate-card"
+        );
 
-    cards.forEach(card => {
 
-        delegates.push({
+    cards.forEach(
+        card => {
 
-            name:
-                card
-                    .querySelector(".delegate-name")
-                    .value
-                    .trim(),
+            delegates.push({
 
-            contact:
-                card
-                    .querySelector(".delegate-contact")
-                    .value
-                    .trim(),
+                name:
+                    card
+                        .querySelector(
+                            ".delegate-name"
+                        )
+                        .value
+                        .trim(),
 
-            email:
-                card
-                    .querySelector(".delegate-email")
-                    .value
-                    .trim(),
+                contact:
+                    card
+                        .querySelector(
+                            ".delegate-contact"
+                        )
+                        .value
+                        .trim(),
 
-            committee:
-                card
-                    .querySelector(".delegate-committee")
-                    .value
+                email:
+                    card
+                        .querySelector(
+                            ".delegate-email"
+                        )
+                        .value
+                        .trim(),
 
-        });
+                committee:
+                    card
+                        .querySelector(
+                            ".delegate-committee"
+                        )
+                        .value
 
-    });
+            });
+
+        }
+    );
 
 
     return {
 
-        registrationType: "school",
+        registrationType:
+            "school",
 
         schoolName:
             document
-                .getElementById("schoolName")
+                .getElementById(
+                    "schoolName"
+                )
                 .value
                 .trim(),
 
         teamName:
             document
-                .getElementById("teamName")
+                .getElementById(
+                    "teamName"
+                )
                 .value
                 .trim(),
 
         facultyAdvisor:
             document
-                .getElementById("facultyAdvisor")
+                .getElementById(
+                    "facultyAdvisor"
+                )
                 .value
                 .trim(),
 
         facultyEmail:
             document
-                .getElementById("facultyEmail")
+                .getElementById(
+                    "facultyEmail"
+                )
                 .value
                 .trim(),
 
         facultyContact:
             document
-                .getElementById("facultyContact")
+                .getElementById(
+                    "facultyContact"
+                )
                 .value
                 .trim(),
 
@@ -1177,35 +1319,60 @@ function getRegistrationData() {
             delegates
 
     };
+
 }
 
 
 /* ==================================================
-   VALIDATION
+   VALIDATE REGISTRATION
 ================================================== */
 
 function validateRegistration(data) {
 
-    if (!data.schoolName)
+    if (
+        !data.schoolName
+    ) {
         return "Please enter the school name.";
+    }
 
-    if (!data.teamName)
+
+    if (
+        !data.teamName
+    ) {
         return "Please enter the team name.";
+    }
 
-    if (!data.facultyAdvisor)
+
+    if (
+        !data.facultyAdvisor
+    ) {
         return "Please enter the faculty advisor.";
+    }
 
-    if (!data.facultyEmail)
+
+    if (
+        !data.facultyEmail
+    ) {
         return "Please enter the faculty advisor email.";
+    }
 
-    if (!data.facultyContact)
+
+    if (
+        !data.facultyContact
+    ) {
         return "Please enter the faculty advisor contact number.";
+    }
+
 
     if (
         data.delegates.length < 6 ||
         data.delegates.length > 10
     ) {
-        return "Your delegation must contain between 6 and 10 delegates.";
+
+        return (
+            "Your delegation must contain between 6 and 10 delegates."
+        );
+
     }
 
 
@@ -1218,17 +1385,57 @@ function validateRegistration(data) {
         const delegate =
             data.delegates[i];
 
-        if (!delegate.name)
-            return "Please enter the name of Delegate " + (i + 1) + ".";
 
-        if (!delegate.contact)
-            return "Please enter the contact of Delegate " + (i + 1) + ".";
+        if (
+            !delegate.name
+        ) {
 
-        if (!delegate.email)
-            return "Please enter the email of Delegate " + (i + 1) + ".";
+            return (
+                "Please enter the name of Delegate " +
+                (i + 1) +
+                "."
+            );
 
-        if (!delegate.committee)
-            return "Please select a committee for Delegate " + (i + 1) + ".";
+        }
+
+
+        if (
+            !delegate.contact
+        ) {
+
+            return (
+                "Please enter the contact of Delegate " +
+                (i + 1) +
+                "."
+            );
+
+        }
+
+
+        if (
+            !delegate.email
+        ) {
+
+            return (
+                "Please enter the email of Delegate " +
+                (i + 1) +
+                "."
+            );
+
+        }
+
+
+        if (
+            !delegate.committee
+        ) {
+
+            return (
+                "Please select a committee for Delegate " +
+                (i + 1) +
+                "."
+            );
+
+        }
 
 
         if (
@@ -1236,58 +1443,128 @@ function validateRegistration(data) {
                 delegate.committee
             )
         ) {
+
             return (
                 delegate.committee +
                 " is not a valid JTMUN XII committee."
             );
+
         }
 
     }
 
 
-    /* ==================================================
-       CHECK DUPLICATE COMMITTEES
-    ================================================== */
+    /* ==============================================
+       GET ALL SELECTED COMMITTEES
+    ============================================== */
 
     const committees =
         data.delegates.map(
-            delegate => delegate.committee
+            delegate =>
+                delegate.committee
         );
 
-    const unique =
-        new Set(committees);
+
+    /* ==============================================
+       UNSC VALIDATION
+
+       EXACTLY 2 DELEGATES REQUIRED
+    ============================================== */
+
+    const unscCount =
+        committees.filter(
+            committee =>
+                committee === UNSC
+        ).length;
+
 
     if (
-        unique.size !==
-        committees.length
+        unscCount !== 2
     ) {
 
         return (
-            "Each delegate must select a different committee. " +
-            "No two delegates can represent the same committee."
+            "United Nations Security Council (UNSC) " +
+            "is a compulsory dual-delegate committee and " +
+            "must have exactly 2 delegates."
         );
 
     }
 
 
-    /* ==================================================
-       CHECK COMPULSORY COMMITTEES
-    ================================================== */
+    /* ==============================================
+       GLOBAL CRISIS VALIDATION
+
+       EXACTLY 1 DELEGATE REQUIRED
+    ============================================== */
+
+    const globalCrisisCount =
+        committees.filter(
+            committee =>
+                committee === GLOBAL_CRISIS
+        ).length;
+
+
+    if (
+        globalCrisisCount !== 1
+    ) {
+
+        return (
+            "Every delegation must include exactly 1 delegate in " +
+            "Global Crisis Cabinet."
+        );
+
+    }
+
+
+    /* ==============================================
+       CHECK DUPLICATE COMMITTEES
+
+       UNSC IS ALLOWED TWICE.
+       ALL OTHER COMMITTEES ONLY ONCE.
+    ============================================== */
+
+    const committeeCounts = {};
+
+
+    committees.forEach(
+        committee => {
+
+            if (
+                committee === UNSC
+            ) {
+
+                return;
+
+            }
+
+
+            if (
+                !committeeCounts[committee]
+            ) {
+
+                committeeCounts[committee] = 0;
+
+            }
+
+
+            committeeCounts[committee]++;
+
+        }
+    );
+
 
     for (
-        const compulsory
-        of COMPULSORY_COMMITTEES
+        const committee
+        in committeeCounts
     ) {
 
         if (
-            !committees.includes(
-                compulsory
-            )
+            committeeCounts[committee] > 1
         ) {
 
             return (
-                "Your delegation must include " +
-                compulsory +
+                "Only one delegate may be assigned to " +
+                committee +
                 "."
             );
 
@@ -1295,12 +1572,14 @@ function validateRegistration(data) {
 
     }
 
+
     return null;
+
 }
 
 
 /* ==================================================
-   REVIEW
+   REVIEW REGISTRATION
 ================================================== */
 
 function reviewRegistration() {
@@ -1308,10 +1587,16 @@ function reviewRegistration() {
     const data =
         getRegistrationData();
 
-    const error =
-        validateRegistration(data);
 
-    if (error) {
+    const error =
+        validateRegistration(
+            data
+        );
+
+
+    if (
+        error
+    ) {
 
         showMessage(
             error,
@@ -1319,45 +1604,90 @@ function reviewRegistration() {
         );
 
         return;
+
     }
 
-    showMessage("", false);
+
+    showMessage(
+        "",
+        false
+    );
+
 
     const review =
-        document.getElementById("reviewBox");
+        document.getElementById(
+            "reviewBox"
+        );
+
 
     let html = "";
+
 
     html += `
 
         <div class="review-line">
-            <strong>School:</strong>
+
+            <strong>
+                School:
+            </strong>
+
             ${escapeHTML(data.schoolName)}
+
         </div>
 
+
         <div class="review-line">
-            <strong>Team:</strong>
+
+            <strong>
+                Team:
+            </strong>
+
             ${escapeHTML(data.teamName)}
+
         </div>
 
+
         <div class="review-line">
-            <strong>Faculty Advisor:</strong>
+
+            <strong>
+                Faculty Advisor:
+            </strong>
+
             ${escapeHTML(data.facultyAdvisor)}
+
         </div>
 
+
         <div class="review-line">
-            <strong>Contact Email:</strong>
+
+            <strong>
+                Contact Email:
+            </strong>
+
             ${escapeHTML(data.facultyEmail)}
+
         </div>
 
+
         <div class="review-line">
-            <strong>Contact Number:</strong>
+
+            <strong>
+                Contact Number:
+            </strong>
+
             ${escapeHTML(data.facultyContact)}
+
         </div>
 
+
         <div class="review-line">
-            <strong>Delegates:</strong>
+
+            <strong>
+                Delegates:
+            </strong>
+
             ${data.delegates.length}
+
         </div>
 
     `;
@@ -1369,14 +1699,9 @@ function reviewRegistration() {
             const role =
                 index === 0
                     ? "Head Delegate"
-                    : "Delegate " + (index + 1);
+                    : "Delegate " +
+                    (index + 1);
 
-            const compulsory =
-                COMPULSORY_COMMITTEES.includes(
-                    delegate.committee
-                )
-                    ? " ⭐ COMPULSORY"
-                    : "";
 
             html += `
 
@@ -1388,62 +1713,79 @@ function reviewRegistration() {
 
                     — ${escapeHTML(delegate.name)}
 
-                    — ${escapeHTML(delegate.committee)}
+                    <br>
 
-                    ${compulsory}
+                    ${escapeHTML(delegate.committee)}
 
                     <br>
 
                     <small>
+
                         ${escapeHTML(delegate.email)}
+
                         ·
+
                         ${escapeHTML(delegate.contact)}
+
                     </small>
 
                 </div>
 
             `;
+
         }
     );
 
 
-    review.innerHTML = html;
+    review.innerHTML =
+        html;
 
 
     document.getElementById(
         "reviewSection"
-    ).style.display = "block";
+    ).style.display =
+        "block";
 
 
     document.getElementById(
         "reviewSection"
     ).scrollIntoView({
-        behavior: "smooth"
+
+        behavior:
+            "smooth"
+
     });
 
 }
 
 
 /* ==================================================
-   EDIT
+   EDIT REGISTRATION
 ================================================== */
 
 function editRegistration() {
 
     document.getElementById(
         "reviewSection"
-    ).style.display = "none";
+    ).style.display =
+        "none";
+
 
     window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+
+        top:
+            0,
+
+        behavior:
+            "smooth"
+
     });
 
 }
 
 
 /* ==================================================
-   SUBMIT
+   SUBMIT REGISTRATION
 ================================================== */
 
 async function submitRegistration() {
@@ -1451,10 +1793,16 @@ async function submitRegistration() {
     const data =
         getRegistrationData();
 
-    const error =
-        validateRegistration(data);
 
-    if (error) {
+    const error =
+        validateRegistration(
+            data
+        );
+
+
+    if (
+        error
+    ) {
 
         showMessage(
             error,
@@ -1462,13 +1810,19 @@ async function submitRegistration() {
         );
 
         return;
+
     }
 
 
     const button =
-        document.getElementById("confirmButton");
+        document.getElementById(
+            "confirmButton"
+        );
 
-    button.disabled = true;
+
+    button.disabled =
+        true;
+
 
     button.textContent =
         "SUBMITTING...";
@@ -1478,11 +1832,21 @@ async function submitRegistration() {
 
         const response =
             await fetch(
+
                 SCRIPT_URL,
+
                 {
-                    method: "POST",
-                    body: JSON.stringify(data)
+
+                    method:
+                        "POST",
+
+                    body:
+                        JSON.stringify(
+                            data
+                        )
+
                 }
+
             );
 
 
@@ -1490,11 +1854,15 @@ async function submitRegistration() {
             await response.json();
 
 
-        if (!result.success) {
+        if (
+            !result.success
+        ) {
 
             throw new Error(
+
                 result.error ||
                 "Registration could not be submitted."
+
             );
 
         }
@@ -1502,18 +1870,22 @@ async function submitRegistration() {
 
         document.getElementById(
             "reviewSection"
-        ).style.display = "none";
+        ).style.display =
+            "none";
 
 
         document.getElementById(
             "successScreen"
-        ).style.display = "block";
+        ).style.display =
+            "block";
 
 
         document.getElementById(
             "successText"
         ).textContent =
-            "Your team has been registered successfully. Your Team ID is " +
+
+            "Your team has been registered successfully. " +
+            "Your Team ID is " +
             result.teamID +
             ".";
 
@@ -1521,7 +1893,10 @@ async function submitRegistration() {
         document.getElementById(
             "successScreen"
         ).scrollIntoView({
-            behavior: "smooth"
+
+            behavior:
+                "smooth"
+
         });
 
 
@@ -1532,7 +1907,10 @@ async function submitRegistration() {
 
     catch(error) {
 
-        console.error(error);
+        console.error(
+            error
+        );
+
 
         showMessage(
 
@@ -1543,10 +1921,14 @@ async function submitRegistration() {
 
         );
 
-        button.disabled = false;
+
+        button.disabled =
+            false;
+
 
         button.textContent =
             "CONFIRM REGISTRATION";
+
     }
 
 }
@@ -1562,29 +1944,41 @@ function showMessage(
 ) {
 
     const message =
-        document.getElementById("message");
+        document.getElementById(
+            "message"
+        );
 
-    if (!text) {
+
+    if (
+        !text
+    ) {
 
         message.style.display =
             "none";
 
         return;
+
     }
+
 
     message.textContent =
         text;
 
+
     message.className =
+
         "message " +
+
         (
             isError
                 ? "error"
                 : "success"
         );
 
+
     message.style.display =
         "block";
+
 }
 
 
@@ -1596,11 +1990,31 @@ function escapeHTML(value) {
 
     return String(value)
 
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
 }
 
 
@@ -1613,4 +2027,5 @@ renderDelegates();
 </script>
 
 </body>
+
 </html>
