@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,11 +28,6 @@ body {
     padding: 0 6% 100px;
     overflow-x: hidden;
 }
-
-
-/* =========================
-   BACKGROUND
-========================= */
 
 body::before,
 body::after {
@@ -83,11 +79,6 @@ body::after {
 
 }
 
-
-/* =========================
-   HEADER
-========================= */
-
 .header {
     max-width: 1100px;
     margin: auto;
@@ -108,11 +99,6 @@ body::after {
     }
 
 }
-
-
-/* =========================
-   LOGO
-========================= */
 
 .logo-wrap {
     display: flex;
@@ -146,11 +132,6 @@ body::after {
     color: #9ba8b6;
 }
 
-
-/* =========================
-   BACK BUTTON
-========================= */
-
 .back {
     display: inline-block;
     color: #8b98a7;
@@ -163,11 +144,6 @@ body::after {
     color: white;
     transform: translateX(-5px);
 }
-
-
-/* =========================
-   HERO
-========================= */
 
 .eyebrow {
     color: #8493a5;
@@ -188,20 +164,10 @@ h1 {
     font-size: 18px;
 }
 
-
-/* =========================
-   CONTAINER
-========================= */
-
 .container {
     max-width: 1100px;
     margin: auto;
 }
-
-
-/* =========================
-   FORM SECTIONS
-========================= */
 
 .form-section {
     border-top: 1px solid rgba(255,255,255,0.08);
@@ -221,11 +187,6 @@ h2 {
     letter-spacing: -1px;
     margin-bottom: 35px;
 }
-
-
-/* =========================
-   INPUTS
-========================= */
 
 .field {
     margin-bottom: 25px;
@@ -263,21 +224,11 @@ select option {
     background: #080b0f;
 }
 
-
-/* =========================
-   GRID
-========================= */
-
 .two-column {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 22px;
 }
-
-
-/* =========================
-   REQUIREMENT BOX
-========================= */
 
 .requirement {
     margin: 25px 0 35px;
@@ -294,11 +245,6 @@ select option {
 .requirement strong {
     color: #e7eef6;
 }
-
-
-/* =========================
-   DELEGATE CONTROLS
-========================= */
 
 .delegate-controls {
     display: flex;
@@ -335,11 +281,6 @@ select option {
     color: black;
     transform: scale(1.05);
 }
-
-
-/* =========================
-   DELEGATE CARD
-========================= */
 
 .delegate-card {
     border: 1px solid rgba(255,255,255,0.09);
@@ -389,11 +330,6 @@ select option {
     letter-spacing: 1px;
 }
 
-
-/* =========================
-   BUTTON
-========================= */
-
 .button {
     border: none;
 
@@ -426,11 +362,6 @@ select option {
     transform: none;
 }
 
-
-/* =========================
-   MESSAGE
-========================= */
-
 .message {
     margin-top: 25px;
     padding: 20px;
@@ -451,11 +382,6 @@ select option {
     display: block;
     color: #c4e7cc;
 }
-
-
-/* =========================
-   REVIEW
-========================= */
 
 #reviewSection {
     display: none;
@@ -499,11 +425,6 @@ select option {
     gap: 15px;
     flex-wrap: wrap;
 }
-
-
-/* =========================
-   SUCCESS SCREEN
-========================= */
 
 #successScreen {
     display: none;
@@ -551,11 +472,6 @@ select option {
     line-height: 1.7;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
 @media(max-width:750px) {
 
     body {
@@ -586,9 +502,7 @@ select option {
 
 </head>
 
-
 <body>
-
 
 <header class="header">
 
@@ -614,7 +528,6 @@ select option {
 
     </div>
 
-
     <a
         href="index.html"
         class="back"
@@ -622,16 +535,13 @@ select option {
         ← Back to JTMUN XII
     </a>
 
-
     <div class="eyebrow">
         SCHOOL REGISTRATION
     </div>
 
-
     <h1>
         Register a Team.
     </h1>
-
 
     <p class="subtitle">
         Each team is registered separately.
@@ -643,9 +553,9 @@ select option {
 <main class="container">
 
 
-<!-- =========================
+<!-- ==================================================
      SCHOOL
-========================= -->
+================================================== -->
 
 <section class="form-section">
 
@@ -656,7 +566,6 @@ select option {
     <h2>
         School Information
     </h2>
-
 
     <div class="field">
 
@@ -738,10 +647,6 @@ select option {
     </div>
 
 
-    <!-- =========================
-         PREFERENCES
-    ========================= -->
-
     <div class="requirement">
 
         <strong>
@@ -819,9 +724,9 @@ select option {
 </section>
 
 
-<!-- =========================
+<!-- ==================================================
      DELEGATES
-========================= -->
+================================================== -->
 
 <section class="form-section">
 
@@ -946,9 +851,9 @@ select option {
 </section>
 
 
-<!-- =========================
+<!-- ==================================================
      REVIEW
-========================= -->
+================================================== -->
 
 <section class="form-section">
 
@@ -1015,9 +920,9 @@ select option {
 </section>
 
 
-<!-- =========================
+<!-- ==================================================
      SUCCESS
-========================= -->
+================================================== -->
 
 <section
     id="successScreen"
@@ -1044,12 +949,13 @@ select option {
 
 <script>
 
+
 /* ==================================================
    GOOGLE APPS SCRIPT API
 ================================================== */
 
 const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbyzPnzGgFv7hHwHxjHGC6L00OHLk5VtJ8Xs6yjJbsDH5oKZAc5NfAU3kA4JIr0t8rCLBQ/exec";
+    "https://script.google.com/macros/s/AKfycbzJsWYLFOCHi5owYo2y3YfvZHPSpumWDp4828C1lQza6YR_GJmCns_iA7R5B3mbdCEJdA/exec";
 
 
 /* ==================================================
@@ -1095,15 +1001,84 @@ let delegateCount = 6;
 
 
 /* ==================================================
+   SAVE CURRENT DELEGATES
+================================================== */
+
+function getCurrentDelegateValues() {
+
+    const values = [];
+
+    const cards =
+        document.querySelectorAll(
+            ".delegate-card"
+        );
+
+
+    cards.forEach(
+        (card, index) => {
+
+            const delegate = {
+
+                name:
+                    card
+                        .querySelector(".delegate-name")
+                        .value
+                        .trim(),
+
+                committee:
+                    card
+                        .querySelector(".delegate-committee")
+                        .value
+
+            };
+
+
+            if (
+                index === 0
+            ) {
+
+                delegate.contact =
+                    card
+                        .querySelector(".delegate-contact")
+                        .value
+                        .trim();
+
+
+                delegate.email =
+                    card
+                        .querySelector(".delegate-email")
+                        .value
+                        .trim();
+
+            }
+
+
+            values.push(
+                delegate
+            );
+
+        }
+    );
+
+
+    return values;
+
+}
+
+
+/* ==================================================
    RENDER DELEGATES
 ================================================== */
 
-function renderDelegates() {
+function renderDelegates(
+    previousValues = []
+) {
 
     const container =
         document.getElementById(
             "delegatesContainer"
         );
+
 
     container.innerHTML = "";
 
@@ -1134,6 +1109,10 @@ function renderDelegates() {
             i === 0
                 ? `<span class="head-badge">HEAD DELEGATE</span>`
                 : "";
+
+
+        const old =
+            previousValues[i] || {};
 
 
         /*
@@ -1169,6 +1148,7 @@ function renderDelegates() {
                         class="delegate-name"
                         type="text"
                         placeholder="Head Delegate name"
+                        value="${escapeAttribute(old.name || "")}"
                     >
 
                 </div>
@@ -1186,6 +1166,7 @@ function renderDelegates() {
                             class="delegate-contact"
                             type="tel"
                             placeholder="03XXXXXXXXX"
+                            value="${escapeAttribute(old.contact || "")}"
                         >
 
                     </div>
@@ -1201,6 +1182,7 @@ function renderDelegates() {
                             class="delegate-email"
                             type="email"
                             placeholder="delegate@example.com"
+                            value="${escapeAttribute(old.email || "")}"
                         >
 
                     </div>
@@ -1224,9 +1206,14 @@ function renderDelegates() {
 
                         ${COMMITTEES.map(
                             committee =>
-                                `<option value="${escapeHTML(committee)}">
+
+                                `<option
+                                    value="${escapeAttribute(committee)}"
+                                    ${old.committee === committee ? "selected" : ""}
+                                >
                                     ${escapeHTML(committee)}
                                 </option>`
+
                         ).join("")}
 
                     </select>
@@ -1254,8 +1241,6 @@ function renderDelegates() {
                         ${title}
                     </h3>
 
-                    ${badge}
-
                 </div>
 
 
@@ -1269,6 +1254,7 @@ function renderDelegates() {
                         class="delegate-name"
                         type="text"
                         placeholder="Delegate name"
+                        value="${escapeAttribute(old.name || "")}"
                     >
 
                 </div>
@@ -1290,9 +1276,14 @@ function renderDelegates() {
 
                         ${COMMITTEES.map(
                             committee =>
-                                `<option value="${escapeHTML(committee)}">
+
+                                `<option
+                                    value="${escapeAttribute(committee)}"
+                                    ${old.committee === committee ? "selected" : ""}
+                                >
                                     ${escapeHTML(committee)}
                                 </option>`
+
                         ).join("")}
 
                     </select>
@@ -1339,9 +1330,16 @@ function addDelegate() {
     }
 
 
+    const previousValues =
+        getCurrentDelegateValues();
+
+
     delegateCount++;
 
-    renderDelegates();
+
+    renderDelegates(
+        previousValues
+    );
 
 }
 
@@ -1366,9 +1364,19 @@ function removeDelegate() {
     }
 
 
+    const previousValues =
+        getCurrentDelegateValues();
+
+
+    previousValues.pop();
+
+
     delegateCount--;
 
-    renderDelegates();
+
+    renderDelegates(
+        previousValues
+    );
 
 }
 
@@ -1413,7 +1421,7 @@ function getRegistrationData() {
 
             /*
             ==========================================
-            ONLY HEAD DELEGATE GETS CONTACT + EMAIL
+            HEAD DELEGATE ONLY
             ==========================================
             */
 
@@ -1494,13 +1502,6 @@ function getRegistrationData() {
                 .value
                 .trim(),
 
-
-        /*
-        ==============================================
-        TEAM PREFERENCES
-        ==============================================
-        */
-
         personalityPreference:
             document
                 .getElementById(
@@ -1524,7 +1525,6 @@ function getRegistrationData() {
                 )
                 .value
                 .trim(),
-
 
         delegates:
             delegates
@@ -1585,12 +1585,6 @@ function validateRegistration(data) {
     }
 
 
-    /*
-    ==============================================
-    PREFERENCES
-    ==============================================
-    */
-
     if (
         !data.personalityPreference
     ) {
@@ -1618,29 +1612,15 @@ function validateRegistration(data) {
     }
 
 
-    /*
-    ==============================================
-    DELEGATE COUNT
-    ==============================================
-    */
-
     if (
         data.delegates.length < 6 ||
         data.delegates.length > 10
     ) {
 
-        return (
-            "Your delegation must contain between 6 and 10 delegates."
-        );
+        return "Your delegation must contain between 6 and 10 delegates.";
 
     }
 
-
-    /*
-    ==============================================
-    HEAD DELEGATE
-    ==============================================
-    */
 
     const head =
         data.delegates[0];
@@ -1681,12 +1661,6 @@ function validateRegistration(data) {
 
     }
 
-
-    /*
-    ==============================================
-    OTHER DELEGATES
-    ==============================================
-    */
 
     for (
         let i = 1;
@@ -1828,8 +1802,7 @@ function validateRegistration(data) {
                 !committeeCounts[committee]
             ) {
 
-                committeeCounts[committee] =
-                    0;
+                committeeCounts[committee] = 0;
 
             }
 
@@ -1841,8 +1814,7 @@ function validateRegistration(data) {
 
 
     for (
-        const committee
-        in committeeCounts
+        const committee in committeeCounts
     ) {
 
         if (
@@ -1853,9 +1825,7 @@ function validateRegistration(data) {
                 committeeCounts[committee] !== 2
             ) {
 
-                return (
-                    "UNSC must have exactly 2 delegates."
-                );
+                return "UNSC must have exactly 2 delegates.";
 
             }
 
@@ -1929,74 +1899,48 @@ function reviewRegistration() {
     html += `
 
         <div class="review-line">
-
             <strong>School:</strong>
             ${escapeHTML(data.schoolName)}
-
         </div>
 
-
         <div class="review-line">
-
             <strong>Team:</strong>
             ${escapeHTML(data.teamName)}
-
         </div>
 
-
         <div class="review-line">
-
             <strong>Faculty Advisor:</strong>
             ${escapeHTML(data.facultyAdvisor)}
-
         </div>
 
-
         <div class="review-line">
-
             <strong>Faculty Email:</strong>
             ${escapeHTML(data.facultyEmail)}
-
         </div>
 
-
         <div class="review-line">
-
             <strong>Faculty Contact:</strong>
             ${escapeHTML(data.facultyContact)}
-
         </div>
 
-
         <div class="review-line">
-
             <strong>Personality / Allotment Preference:</strong>
             ${escapeHTML(data.personalityPreference)}
-
         </div>
 
-
         <div class="review-line">
-
             <strong>Country Preference 1:</strong>
             ${escapeHTML(data.countryPreference1)}
-
         </div>
 
-
         <div class="review-line">
-
             <strong>Country Preference 2:</strong>
             ${escapeHTML(data.countryPreference2)}
-
         </div>
 
-
         <div class="review-line">
-
             <strong>Delegates:</strong>
             ${data.delegates.length}
-
         </div>
 
     `;
@@ -2172,6 +2116,12 @@ async function submitRegistration() {
 
     try {
 
+        /*
+        ==============================================
+        SEND JSON
+        ==============================================
+        */
+
         const apiResponse =
             await fetch(
 
@@ -2181,6 +2131,13 @@ async function submitRegistration() {
 
                     method:
                         "POST",
+
+                    headers: {
+
+                        "Content-Type":
+                            "text/plain;charset=utf-8"
+
+                    },
 
                     body:
                         JSON.stringify(
@@ -2192,9 +2149,39 @@ async function submitRegistration() {
             );
 
 
+        /*
+        ==============================================
+        CHECK HTTP RESPONSE
+        ==============================================
+        */
+
+        if (
+            !apiResponse.ok
+        ) {
+
+            throw new Error(
+                "Server returned HTTP " +
+                apiResponse.status
+            );
+
+        }
+
+
+        /*
+        ==============================================
+        READ RESPONSE
+        ==============================================
+        */
+
         const result =
             await apiResponse.json();
 
+
+        /*
+        ==============================================
+        BACKEND ERROR
+        ==============================================
+        */
 
         if (
             !result.success
@@ -2210,11 +2197,23 @@ async function submitRegistration() {
         }
 
 
+        /*
+        ==============================================
+        HIDE REVIEW
+        ==============================================
+        */
+
         document.getElementById(
             "reviewSection"
         ).style.display =
             "none";
 
+
+        /*
+        ==============================================
+        SHOW SUCCESS
+        ==============================================
+        */
 
         document.getElementById(
             "successScreen"
@@ -2245,12 +2244,13 @@ async function submitRegistration() {
         button.textContent =
             "REGISTRATION RECEIVED";
 
-    }
 
+    }
 
     catch(error) {
 
         console.error(
+            "JTMUN SUBMISSION ERROR:",
             error
         );
 
@@ -2258,7 +2258,7 @@ async function submitRegistration() {
         showMessage(
 
             "Registration could not be submitted. " +
-            "Please check your connection or contact the JTMUN team.",
+            error.message,
 
             true
 
@@ -2322,6 +2322,17 @@ function showMessage(
     message.style.display =
         "block";
 
+
+    message.scrollIntoView({
+
+        behavior:
+            "smooth",
+
+        block:
+            "center"
+
+    });
+
 }
 
 
@@ -2362,6 +2373,19 @@ function escapeHTML(value) {
 
 
 /* ==================================================
+   ESCAPE ATTRIBUTE
+================================================== */
+
+function escapeAttribute(value) {
+
+    return escapeHTML(
+        value
+    );
+
+}
+
+
+/* ==================================================
    INITIALISE
 ================================================== */
 
@@ -2372,3 +2396,4 @@ renderDelegates();
 </body>
 
 </html>
+```
