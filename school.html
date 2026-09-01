@@ -10,10 +10,6 @@
 
 <style>
 
-/* =========================
-   RESET
-========================= */
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -65,8 +61,7 @@ body::after {
 
 @keyframes floatOne {
 
-    0%,
-    100% {
+    0%, 100% {
         transform: translate(0,0) rotate(0deg);
     }
 
@@ -78,8 +73,7 @@ body::after {
 
 @keyframes floatTwo {
 
-    0%,
-    100% {
+    0%, 100% {
         transform: translate(0,0);
     }
 
@@ -172,7 +166,7 @@ body::after {
 
 
 /* =========================
-   HERO TEXT
+   HERO
 ========================= */
 
 .eyebrow {
@@ -538,8 +532,7 @@ select option {
 
 @keyframes successPulse {
 
-    0%,
-    100% {
+    0%, 100% {
         transform: scale(1);
     }
 
@@ -593,12 +586,9 @@ select option {
 
 </head>
 
+
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header class="header">
 
@@ -654,7 +644,7 @@ select option {
 
 
 <!-- =========================
-     SCHOOL INFORMATION
+     SCHOOL
 ========================= -->
 
 <section class="form-section">
@@ -693,7 +683,7 @@ select option {
         <input
             id="teamName"
             type="text"
-            placeholder="e.g. Team A"
+            placeholder="e.g. JT Team A"
         >
 
     </div>
@@ -747,6 +737,85 @@ select option {
 
     </div>
 
+
+    <!-- =========================
+         PREFERENCES
+    ========================= -->
+
+    <div class="requirement">
+
+        <strong>
+            Team Preferences
+        </strong>
+
+        <br><br>
+
+        These preferences apply to the
+        <strong>entire delegation/team</strong>.
+
+        <br><br>
+
+        Please provide:
+
+        <br><br>
+
+        • <strong>One Personality Preference</strong>
+
+        <br>
+
+        • <strong>Two Country Preferences</strong>
+
+    </div>
+
+
+    <div class="field">
+
+        <label>
+            Personality / Allotment Preference
+        </label>
+
+        <input
+            id="personalityPreference"
+            type="text"
+            placeholder="Enter preferred personality"
+        >
+
+    </div>
+
+
+    <div class="two-column">
+
+        <div class="field">
+
+            <label>
+                Country Preference 1
+            </label>
+
+            <input
+                id="countryPreference1"
+                type="text"
+                placeholder="Enter first preferred country"
+            >
+
+        </div>
+
+
+        <div class="field">
+
+            <label>
+                Country Preference 2
+            </label>
+
+            <input
+                id="countryPreference2"
+                type="text"
+                placeholder="Enter second preferred country"
+            >
+
+        </div>
+
+    </div>
+
 </section>
 
 
@@ -770,10 +839,26 @@ select option {
         A delegation must contain between
         <strong>6 and 10 delegates</strong>.
 
+        <br><br>
+
         The first delegate registered will be the
         <strong>Head Delegate</strong>.
 
-        Each delegate must be assigned a committee.
+        <br><br>
+
+        <strong>Head Delegate</strong> information includes:
+
+        <br>
+
+        Name, Contact Number, Email and Committee.
+
+        <br><br>
+
+        <strong>Delegates 2–10</strong> only require:
+
+        <br>
+
+        Name and Committee.
 
         <br><br>
 
@@ -862,7 +947,7 @@ select option {
 
 
 <!-- =========================
-     REVIEW BUTTON
+     REVIEW
 ========================= -->
 
 <section class="form-section">
@@ -883,10 +968,6 @@ select option {
 
 </section>
 
-
-<!-- =========================
-     REVIEW
-========================= -->
 
 <section
     class="form-section"
@@ -972,7 +1053,7 @@ const SCRIPT_URL =
 
 
 /* ==================================================
-   OFFICIAL JTMUN XII COMMITTEES
+   COMMITTEES
 ================================================== */
 
 const COMMITTEES = [
@@ -1024,7 +1105,6 @@ function renderDelegates() {
             "delegatesContainer"
         );
 
-
     container.innerHTML = "";
 
 
@@ -1035,7 +1115,9 @@ function renderDelegates() {
     ) {
 
         const card =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
 
         card.className =
@@ -1054,46 +1136,139 @@ function renderDelegates() {
                 : "";
 
 
-        card.innerHTML = `
+        /*
+        ==============================================
+        HEAD DELEGATE
+        ==============================================
+        */
 
-            <div class="delegate-title">
+        if (
+            i === 0
+        ) {
 
-                <h3>
-                    ${title}
-                </h3>
+            card.innerHTML = `
 
-                ${badge}
+                <div class="delegate-title">
 
-            </div>
+                    <h3>
+                        ${title}
+                    </h3>
 
+                    ${badge}
 
-            <div class="field">
+                </div>
 
-                <label>
-                    Name
-                </label>
-
-                <input
-                    class="delegate-name"
-                    type="text"
-                    placeholder="Delegate name"
-                >
-
-            </div>
-
-
-            <div class="two-column">
 
                 <div class="field">
 
                     <label>
-                        Contact
+                        Name
                     </label>
 
                     <input
-                        class="delegate-contact"
-                        type="tel"
-                        placeholder="03XXXXXXXXX"
+                        class="delegate-name"
+                        type="text"
+                        placeholder="Head Delegate name"
+                    >
+
+                </div>
+
+
+                <div class="two-column">
+
+                    <div class="field">
+
+                        <label>
+                            Contact Number
+                        </label>
+
+                        <input
+                            class="delegate-contact"
+                            type="tel"
+                            placeholder="03XXXXXXXXX"
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            class="delegate-email"
+                            type="email"
+                            placeholder="delegate@example.com"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>
+                        Committee
+                    </label>
+
+                    <select
+                        class="delegate-committee"
+                    >
+
+                        <option value="">
+                            Choose your committee
+                        </option>
+
+                        ${COMMITTEES.map(
+                            committee =>
+                                `<option value="${escapeHTML(committee)}">
+                                    ${escapeHTML(committee)}
+                                </option>`
+                        ).join("")}
+
+                    </select>
+
+                </div>
+
+            `;
+
+        }
+
+
+        /*
+        ==============================================
+        DELEGATES 2–10
+        ==============================================
+        */
+
+        else {
+
+            card.innerHTML = `
+
+                <div class="delegate-title">
+
+                    <h3>
+                        ${title}
+                    </h3>
+
+                    ${badge}
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>
+                        Name
+                    </label>
+
+                    <input
+                        class="delegate-name"
+                        type="text"
+                        placeholder="Delegate name"
                     >
 
                 </div>
@@ -1102,46 +1277,31 @@ function renderDelegates() {
                 <div class="field">
 
                     <label>
-                        Email
+                        Committee
                     </label>
 
-                    <input
-                        class="delegate-email"
-                        type="email"
-                        placeholder="delegate@example.com"
+                    <select
+                        class="delegate-committee"
                     >
+
+                        <option value="">
+                            Choose your committee
+                        </option>
+
+                        ${COMMITTEES.map(
+                            committee =>
+                                `<option value="${escapeHTML(committee)}">
+                                    ${escapeHTML(committee)}
+                                </option>`
+                        ).join("")}
+
+                    </select>
 
                 </div>
 
-            </div>
+            `;
 
-
-            <div class="field">
-
-                <label>
-                    Committee
-                </label>
-
-                <select
-                    class="delegate-committee"
-                >
-
-                    <option value="">
-                        Choose your committee
-                    </option>
-
-                    ${COMMITTEES.map(
-                        committee =>
-                            `<option value="${committee}">
-                                ${committee}
-                            </option>`
-                    ).join("")}
-
-                </select>
-
-            </div>
-
-        `;
+        }
 
 
         container.appendChild(
@@ -1229,30 +1389,14 @@ function getRegistrationData() {
 
 
     cards.forEach(
-        card => {
+        (card, index) => {
 
-            delegates.push({
+            const delegate = {
 
                 name:
                     card
                         .querySelector(
                             ".delegate-name"
-                        )
-                        .value
-                        .trim(),
-
-                contact:
-                    card
-                        .querySelector(
-                            ".delegate-contact"
-                        )
-                        .value
-                        .trim(),
-
-                email:
-                    card
-                        .querySelector(
-                            ".delegate-email"
                         )
                         .value
                         .trim(),
@@ -1264,7 +1408,42 @@ function getRegistrationData() {
                         )
                         .value
 
-            });
+            };
+
+
+            /*
+            ==========================================
+            ONLY HEAD DELEGATE GETS CONTACT + EMAIL
+            ==========================================
+            */
+
+            if (
+                index === 0
+            ) {
+
+                delegate.contact =
+                    card
+                        .querySelector(
+                            ".delegate-contact"
+                        )
+                        .value
+                        .trim();
+
+
+                delegate.email =
+                    card
+                        .querySelector(
+                            ".delegate-email"
+                        )
+                        .value
+                        .trim();
+
+            }
+
+
+            delegates.push(
+                delegate
+            );
 
         }
     );
@@ -1315,6 +1494,38 @@ function getRegistrationData() {
                 .value
                 .trim(),
 
+
+        /*
+        ==============================================
+        TEAM PREFERENCES
+        ==============================================
+        */
+
+        personalityPreference:
+            document
+                .getElementById(
+                    "personalityPreference"
+                )
+                .value
+                .trim(),
+
+        countryPreference1:
+            document
+                .getElementById(
+                    "countryPreference1"
+                )
+                .value
+                .trim(),
+
+        countryPreference2:
+            document
+                .getElementById(
+                    "countryPreference2"
+                )
+                .value
+                .trim(),
+
+
         delegates:
             delegates
 
@@ -1332,37 +1543,86 @@ function validateRegistration(data) {
     if (
         !data.schoolName
     ) {
+
         return "Please enter the school name.";
+
     }
 
 
     if (
         !data.teamName
     ) {
+
         return "Please enter the team name.";
+
     }
 
 
     if (
         !data.facultyAdvisor
     ) {
+
         return "Please enter the faculty advisor.";
+
     }
 
 
     if (
         !data.facultyEmail
     ) {
+
         return "Please enter the faculty advisor email.";
+
     }
 
 
     if (
         !data.facultyContact
     ) {
+
         return "Please enter the faculty advisor contact number.";
+
     }
 
+
+    /*
+    ==============================================
+    PREFERENCES
+    ==============================================
+    */
+
+    if (
+        !data.personalityPreference
+    ) {
+
+        return "Please enter the Personality / Allotment Preference.";
+
+    }
+
+
+    if (
+        !data.countryPreference1
+    ) {
+
+        return "Please enter Country Preference 1.";
+
+    }
+
+
+    if (
+        !data.countryPreference2
+    ) {
+
+        return "Please enter Country Preference 2.";
+
+    }
+
+
+    /*
+    ==============================================
+    DELEGATE COUNT
+    ==============================================
+    */
 
     if (
         data.delegates.length < 6 ||
@@ -1376,8 +1636,60 @@ function validateRegistration(data) {
     }
 
 
+    /*
+    ==============================================
+    HEAD DELEGATE
+    ==============================================
+    */
+
+    const head =
+        data.delegates[0];
+
+
+    if (
+        !head.name
+    ) {
+
+        return "Please enter the Head Delegate name.";
+
+    }
+
+
+    if (
+        !head.contact
+    ) {
+
+        return "Please enter the Head Delegate contact number.";
+
+    }
+
+
+    if (
+        !head.email
+    ) {
+
+        return "Please enter the Head Delegate email.";
+
+    }
+
+
+    if (
+        !head.committee
+    ) {
+
+        return "Please select a committee for the Head Delegate.";
+
+    }
+
+
+    /*
+    ==============================================
+    OTHER DELEGATES
+    ==============================================
+    */
+
     for (
-        let i = 0;
+        let i = 1;
         i < data.delegates.length;
         i++
     ) {
@@ -1400,32 +1712,6 @@ function validateRegistration(data) {
 
 
         if (
-            !delegate.contact
-        ) {
-
-            return (
-                "Please enter the contact of Delegate " +
-                (i + 1) +
-                "."
-            );
-
-        }
-
-
-        if (
-            !delegate.email
-        ) {
-
-            return (
-                "Please enter the email of Delegate " +
-                (i + 1) +
-                "."
-            );
-
-        }
-
-
-        if (
             !delegate.committee
         ) {
 
@@ -1437,26 +1723,14 @@ function validateRegistration(data) {
 
         }
 
-
-        if (
-            !COMMITTEES.includes(
-                delegate.committee
-            )
-        ) {
-
-            return (
-                delegate.committee +
-                " is not a valid JTMUN XII committee."
-            );
-
-        }
-
     }
 
 
-    /* ==============================================
-       GET ALL SELECTED COMMITTEES
-    ============================================== */
+    /*
+    ==============================================
+    COMMITTEE VALIDATION
+    ==============================================
+    */
 
     const committees =
         data.delegates.map(
@@ -1465,11 +1739,33 @@ function validateRegistration(data) {
         );
 
 
-    /* ==============================================
-       UNSC VALIDATION
+    for (
+        let i = 0;
+        i < committees.length;
+        i++
+    ) {
 
-       EXACTLY 2 DELEGATES REQUIRED
-    ============================================== */
+        if (
+            !COMMITTEES.includes(
+                committees[i]
+            )
+        ) {
+
+            return (
+                committees[i] +
+                " is not a valid JTMUN XII committee."
+            );
+
+        }
+
+    }
+
+
+    /*
+    ==============================================
+    UNSC
+    ==============================================
+    */
 
     const unscCount =
         committees.filter(
@@ -1491,11 +1787,11 @@ function validateRegistration(data) {
     }
 
 
-    /* ==============================================
-       GLOBAL CRISIS VALIDATION
-
-       EXACTLY 1 DELEGATE REQUIRED
-    ============================================== */
+    /*
+    ==============================================
+    GLOBAL CRISIS
+    ==============================================
+    */
 
     const globalCrisisCount =
         committees.filter(
@@ -1516,12 +1812,11 @@ function validateRegistration(data) {
     }
 
 
-    /* ==============================================
-       CHECK DUPLICATE COMMITTEES
-
-       UNSC IS ALLOWED TWICE.
-       ALL OTHER COMMITTEES ONLY ONCE.
-    ============================================== */
+    /*
+    ==============================================
+    DUPLICATE COMMITTEES
+    ==============================================
+    */
 
     const committeeCounts = {};
 
@@ -1530,19 +1825,11 @@ function validateRegistration(data) {
         committee => {
 
             if (
-                committee === UNSC
-            ) {
-
-                return;
-
-            }
-
-
-            if (
                 !committeeCounts[committee]
             ) {
 
-                committeeCounts[committee] = 0;
+                committeeCounts[committee] =
+                    0;
 
             }
 
@@ -1559,6 +1846,22 @@ function validateRegistration(data) {
     ) {
 
         if (
+            committee === UNSC
+        ) {
+
+            if (
+                committeeCounts[committee] !== 2
+            ) {
+
+                return (
+                    "UNSC must have exactly 2 delegates."
+                );
+
+            }
+
+        }
+
+        else if (
             committeeCounts[committee] > 1
         ) {
 
@@ -1579,7 +1882,7 @@ function validateRegistration(data) {
 
 
 /* ==================================================
-   REVIEW REGISTRATION
+   REVIEW
 ================================================== */
 
 function reviewRegistration() {
@@ -1627,10 +1930,7 @@ function reviewRegistration() {
 
         <div class="review-line">
 
-            <strong>
-                School:
-            </strong>
-
+            <strong>School:</strong>
             ${escapeHTML(data.schoolName)}
 
         </div>
@@ -1638,10 +1938,7 @@ function reviewRegistration() {
 
         <div class="review-line">
 
-            <strong>
-                Team:
-            </strong>
-
+            <strong>Team:</strong>
             ${escapeHTML(data.teamName)}
 
         </div>
@@ -1649,10 +1946,7 @@ function reviewRegistration() {
 
         <div class="review-line">
 
-            <strong>
-                Faculty Advisor:
-            </strong>
-
+            <strong>Faculty Advisor:</strong>
             ${escapeHTML(data.facultyAdvisor)}
 
         </div>
@@ -1660,10 +1954,7 @@ function reviewRegistration() {
 
         <div class="review-line">
 
-            <strong>
-                Contact Email:
-            </strong>
-
+            <strong>Faculty Email:</strong>
             ${escapeHTML(data.facultyEmail)}
 
         </div>
@@ -1671,10 +1962,7 @@ function reviewRegistration() {
 
         <div class="review-line">
 
-            <strong>
-                Contact Number:
-            </strong>
-
+            <strong>Faculty Contact:</strong>
             ${escapeHTML(data.facultyContact)}
 
         </div>
@@ -1682,10 +1970,31 @@ function reviewRegistration() {
 
         <div class="review-line">
 
-            <strong>
-                Delegates:
-            </strong>
+            <strong>Personality / Allotment Preference:</strong>
+            ${escapeHTML(data.personalityPreference)}
 
+        </div>
+
+
+        <div class="review-line">
+
+            <strong>Country Preference 1:</strong>
+            ${escapeHTML(data.countryPreference1)}
+
+        </div>
+
+
+        <div class="review-line">
+
+            <strong>Country Preference 2:</strong>
+            ${escapeHTML(data.countryPreference2)}
+
+        </div>
+
+
+        <div class="review-line">
+
+            <strong>Delegates:</strong>
             ${data.delegates.length}
 
         </div>
@@ -1693,45 +2002,78 @@ function reviewRegistration() {
     `;
 
 
+    /*
+    ==============================================
+    REVIEW DELEGATES
+    ==============================================
+    */
+
     data.delegates.forEach(
         (delegate, index) => {
 
             const role =
                 index === 0
                     ? "Head Delegate"
-                    : "Delegate " +
-                    (index + 1);
+                    : "Delegate " + (index + 1);
 
 
-            html += `
+            if (
+                index === 0
+            ) {
 
-                <div class="review-delegate">
+                html += `
 
-                    <strong>
-                        ${role}
-                    </strong>
+                    <div class="review-delegate">
 
-                    — ${escapeHTML(delegate.name)}
+                        <strong>
+                            ${role}
+                        </strong>
 
-                    <br>
+                        — ${escapeHTML(delegate.name)}
 
-                    ${escapeHTML(delegate.committee)}
+                        <br>
 
-                    <br>
+                        ${escapeHTML(delegate.committee)}
 
-                    <small>
+                        <br>
 
-                        ${escapeHTML(delegate.email)}
+                        <small>
 
-                        ·
+                            ${escapeHTML(delegate.email)}
 
-                        ${escapeHTML(delegate.contact)}
+                            ·
 
-                    </small>
+                            ${escapeHTML(delegate.contact)}
 
-                </div>
+                        </small>
 
-            `;
+                    </div>
+
+                `;
+
+            }
+
+            else {
+
+                html += `
+
+                    <div class="review-delegate">
+
+                        <strong>
+                            ${role}
+                        </strong>
+
+                        — ${escapeHTML(delegate.name)}
+
+                        <br>
+
+                        ${escapeHTML(delegate.committee)}
+
+                    </div>
+
+                `;
+
+            }
 
         }
     );
@@ -1760,7 +2102,7 @@ function reviewRegistration() {
 
 
 /* ==================================================
-   EDIT REGISTRATION
+   EDIT
 ================================================== */
 
 function editRegistration() {
@@ -1785,7 +2127,7 @@ function editRegistration() {
 
 
 /* ==================================================
-   SUBMIT REGISTRATION
+   SUBMIT
 ================================================== */
 
 async function submitRegistration() {
@@ -1830,7 +2172,7 @@ async function submitRegistration() {
 
     try {
 
-        const response =
+        const apiResponse =
             await fetch(
 
                 SCRIPT_URL,
@@ -1851,7 +2193,7 @@ async function submitRegistration() {
 
 
         const result =
-            await response.json();
+            await apiResponse.json();
 
 
         if (
@@ -1904,6 +2246,7 @@ async function submitRegistration() {
             "REGISTRATION RECEIVED";
 
     }
+
 
     catch(error) {
 
