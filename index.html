@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,35 +40,47 @@ body {
 body::before {
     content: "";
     position: fixed;
+
     width: 650px;
     height: 650px;
+
     border: 1px solid rgba(180,210,235,0.08);
     border-radius: 50%;
+
     top: -300px;
     right: -180px;
+
     pointer-events: none;
+
     z-index: -2;
+
     animation: floatCircle 12s ease-in-out infinite;
 }
 
 body::after {
     content: "";
     position: fixed;
+
     width: 450px;
     height: 450px;
+
     border: 1px solid rgba(180,210,235,0.06);
     border-radius: 50%;
+
     bottom: -220px;
     left: -150px;
+
     pointer-events: none;
+
     z-index: -2;
+
     animation: floatCircle 16s ease-in-out infinite reverse;
 }
 
+
 @keyframes floatCircle {
 
-    0%,
-    100% {
+    0%, 100% {
         transform: translate(0,0) rotate(0deg);
     }
 
@@ -84,48 +97,63 @@ body::after {
 
 nav {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
+
     z-index: 1000;
 
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
     padding: 18px 6%;
 
     background: rgba(5,7,10,0.78);
+
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-bottom:
+        1px solid rgba(255,255,255,0.06);
 }
 
 
 /* =========================
-   LOGO
+   NAV LOGO
 ========================= */
 
 .nav-logo {
     display: flex;
+
     align-items: center;
+
     gap: 12px;
 
     text-decoration: none;
+
     color: white;
 }
+
 
 .nav-logo img {
     width: 45px;
     height: 45px;
+
     object-fit: contain;
+
     border-radius: 50%;
 }
 
+
 .logo-text {
     font-size: 19px;
+
     font-weight: 700;
+
     letter-spacing: 3px;
 }
 
@@ -136,16 +164,25 @@ nav {
 
 .nav-links {
     display: flex;
+
     gap: 32px;
+
     list-style: none;
 }
 
+
 .nav-links a {
     color: #aab4c1;
+
     text-decoration: none;
+
     font-size: 14px;
-    transition: color 0.3s ease;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
 }
+
 
 .nav-links a:hover {
     color: white;
@@ -153,22 +190,25 @@ nav {
 
 
 /* =========================
-   NAV REGISTER BUTTON
+   NAV REGISTER
 ========================= */
 
 .nav-button {
     padding: 11px 20px;
 
     background: #eaf4ff;
+
     color: #05070a !important;
 
     font-weight: 700;
+
     text-decoration: none;
 
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
 }
+
 
 .nav-button:hover {
     transform: translateY(-2px);
@@ -184,17 +224,23 @@ nav {
 ========================= */
 
 .hero {
+
     min-height: 100vh;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
 
-    padding: 150px 6% 100px;
+    padding:
+        150px 6%
+        100px;
 
     position: relative;
+
     overflow: hidden;
 }
 
@@ -204,9 +250,12 @@ nav {
 ========================= */
 
 .hero-content {
+
     max-width: 1000px;
+
     position: relative;
-    z-index: 3;
+
+    z-index: 2;
 }
 
 
@@ -215,6 +264,7 @@ nav {
 ========================= */
 
 .hero-logo {
+
     width: 145px;
     height: 145px;
 
@@ -228,8 +278,10 @@ nav {
             rgba(210,230,255,0.08)
         );
 
-    animation: logoAppear 1s ease forwards;
+    animation:
+        logoAppear 1s ease forwards;
 }
+
 
 @keyframes logoAppear {
 
@@ -251,12 +303,17 @@ nav {
 ========================= */
 
 .eyebrow {
+
     color: #94a4b6;
+
     letter-spacing: 7px;
+
     font-size: 13px;
+
     margin-bottom: 25px;
 
-    animation: fadeUp 1s ease forwards;
+    animation:
+        fadeUp 1s ease forwards;
 }
 
 
@@ -265,12 +322,18 @@ nav {
 ========================= */
 
 .hero h1 {
-    font-size: clamp(65px, 12vw, 155px);
+
+    font-size:
+        clamp(65px, 12vw, 155px);
+
     line-height: 0.88;
+
     letter-spacing: -8px;
 
-    animation: fadeUp 1.1s ease forwards;
+    animation:
+        fadeUp 1.1s ease forwards;
 }
+
 
 .hero h1 span {
     color: #aebed0;
@@ -282,15 +345,20 @@ nav {
 ========================= */
 
 .hero-subtitle {
-    margin: 35px auto 0;
+
+    margin:
+        35px auto 0;
+
     max-width: 650px;
 
     font-size: 20px;
+
     line-height: 1.7;
 
     color: #8996a5;
 
-    animation: fadeUp 1.3s ease forwards;
+    animation:
+        fadeUp 1.3s ease forwards;
 }
 
 
@@ -299,35 +367,45 @@ nav {
 ========================= */
 
 .hero-buttons {
+
     margin-top: 42px;
 
     display: flex;
+
     justify-content: center;
+
     gap: 15px;
+
     flex-wrap: wrap;
 
-    animation: fadeUp 1.5s ease forwards;
+    animation:
+        fadeUp 1.5s ease forwards;
 }
 
 
 /* =========================
-   BUTTONS
+   BUTTON
 ========================= */
 
 .button {
+
     display: inline-block;
 
-    padding: 17px 28px;
+    padding:
+        17px 28px;
 
     text-decoration: none;
 
     background: #eaf4ff;
+
     color: #05070a;
 
     font-weight: 700;
+
     letter-spacing: 1px;
 
-    border: 1px solid #eaf4ff;
+    border:
+        1px solid #eaf4ff;
 
     transition:
         transform 0.3s ease,
@@ -335,222 +413,23 @@ nav {
         background 0.3s ease;
 }
 
+
 .button:hover {
-    transform: translateY(-4px);
+
+    transform:
+        translateY(-4px);
 
     box-shadow:
         0 15px 40px
         rgba(200,225,255,0.12);
 }
 
+
 .button.secondary {
+
     background: transparent;
+
     color: #eaf4ff;
-}
-
-
-/* =========================
-   HERO ORBITS
-========================= */
-
-.orbit-system {
-    position: absolute;
-
-    width: 650px;
-    height: 650px;
-
-    right: -40px;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    pointer-events: none;
-
-    opacity: 0.8;
-}
-
-
-/* OUTER ORBIT */
-
-.orbit-one {
-    position: absolute;
-
-    width: 520px;
-    height: 520px;
-
-    top: 65px;
-    left: 65px;
-
-    border:
-        1px solid
-        rgba(210,225,245,0.20);
-
-    border-radius: 50%;
-
-    animation:
-        orbitSpin 25s linear infinite;
-}
-
-
-/* MIDDLE ORBIT */
-
-.orbit-two {
-    position: absolute;
-
-    width: 370px;
-    height: 370px;
-
-    top: 140px;
-    left: 140px;
-
-    border:
-        1px solid
-        rgba(210,225,245,0.18);
-
-    border-radius: 50%;
-
-    animation:
-        orbitSpinReverse 18s linear infinite;
-}
-
-
-/* INNER ORBIT */
-
-.orbit-three {
-    position: absolute;
-
-    width: 220px;
-    height: 220px;
-
-    top: 215px;
-    left: 215px;
-
-    border:
-        1px solid
-        rgba(210,225,245,0.22);
-
-    border-radius: 50%;
-
-    animation:
-        orbitSpin 12s linear infinite;
-}
-
-
-/* ORBIT DOT */
-
-.orbit-dot {
-    position: absolute;
-
-    width: 11px;
-    height: 11px;
-
-    background: #dce9f5;
-
-    border-radius: 50%;
-
-    box-shadow:
-        0 0 18px
-        rgba(220,235,250,0.7);
-}
-
-
-/* DOT POSITIONS */
-
-.dot-one {
-    top: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.dot-two {
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.dot-three {
-    top: 50%;
-    right: -5px;
-    transform: translateY(-50%);
-}
-
-
-/* CENTER XII */
-
-.orbit-center {
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    width: 150px;
-    height: 150px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border:
-        1px solid
-        rgba(220,230,240,0.12);
-
-    border-radius: 50%;
-
-    font-size: 58px;
-    font-weight: 700;
-    letter-spacing: -3px;
-
-    color:
-        rgba(220,230,240,0.32);
-
-    animation:
-        centerPulse 4s ease-in-out infinite;
-}
-
-
-@keyframes orbitSpin {
-
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-
-}
-
-
-@keyframes orbitSpinReverse {
-
-    from {
-        transform: rotate(360deg);
-    }
-
-    to {
-        transform: rotate(0deg);
-    }
-
-}
-
-
-@keyframes centerPulse {
-
-    0%,
-    100% {
-        transform:
-            translate(-50%, -50%)
-            scale(1);
-    }
-
-    50% {
-        transform:
-            translate(-50%, -50%)
-            scale(1.07);
-    }
-
 }
 
 
@@ -559,7 +438,9 @@ nav {
 ========================= */
 
 section {
-    padding: 120px 8%;
+
+    padding:
+        120px 8%;
 
     border-top:
         1px solid
@@ -568,19 +449,29 @@ section {
     text-align: center;
 }
 
+
 section h2 {
-    font-size: clamp(45px, 7vw, 90px);
+
+    font-size:
+        clamp(45px, 7vw, 90px);
+
     letter-spacing: -4px;
+
     margin-bottom: 30px;
 }
 
+
 .section-text {
+
     max-width: 720px;
-    margin: 0 auto;
+
+    margin:
+        0 auto;
 
     color: #8f9aa8;
 
     font-size: 19px;
+
     line-height: 1.7;
 }
 
@@ -590,6 +481,7 @@ section h2 {
 ========================= */
 
 .about-logo {
+
     width: 90px;
     height: 90px;
 
@@ -604,6 +496,7 @@ section h2 {
 ========================= */
 
 .event-grid {
+
     margin-top: 65px;
 
     max-width: 1000px;
@@ -614,7 +507,7 @@ section h2 {
     display: grid;
 
     grid-template-columns:
-        repeat(2, 1fr);
+        repeat(2,1fr);
 
     gap: 1px;
 
@@ -622,7 +515,9 @@ section h2 {
         rgba(255,255,255,0.08);
 }
 
+
 .event-card {
+
     padding: 50px;
 
     background: #070a0e;
@@ -632,12 +527,18 @@ section h2 {
         background 0.4s ease;
 }
 
+
 .event-card:hover {
+
     background: #0b1016;
-    transform: translateY(-5px);
+
+    transform:
+        translateY(-5px);
 }
 
+
 .event-card span {
+
     color: #8292a4;
 
     letter-spacing: 3px;
@@ -645,12 +546,17 @@ section h2 {
     font-size: 12px;
 }
 
+
 .event-card h3 {
+
     margin-top: 15px;
+
     font-size: 28px;
 }
 
+
 .event-card p {
+
     margin-top: 15px;
 
     color: #84909e;
@@ -664,9 +570,11 @@ section h2 {
 ========================= */
 
 .committee-grid {
+
     max-width: 1100px;
 
-    margin: 60px auto 0;
+    margin:
+        60px auto 0;
 
     display: grid;
 
@@ -677,20 +585,23 @@ section h2 {
 }
 
 
-/* COMMITTEE CARD */
+/* =========================
+   COMMITTEE CARD
+========================= */
 
 .committee-card {
+
     position: relative;
 
-    min-height: 250px;
+    min-height: 230px;
 
-    padding: 32px;
+    padding: 30px;
 
     display: flex;
 
     flex-direction: column;
 
-    justify-content: flex-start;
+    justify-content: space-between;
 
     text-align: left;
 
@@ -707,9 +618,11 @@ section h2 {
             rgba(255,255,255,0.012)
         );
 
-    backdrop-filter: blur(12px);
+    backdrop-filter:
+        blur(12px);
 
-    -webkit-backdrop-filter: blur(12px);
+    -webkit-backdrop-filter:
+        blur(12px);
 
     transition:
         transform 0.35s cubic-bezier(.2,.8,.2,1),
@@ -718,12 +631,15 @@ section h2 {
         box-shadow 0.35s ease;
 
     overflow: hidden;
+
+    will-change: transform;
 }
 
 
 /* DECORATIVE CIRCLE */
 
 .committee-card::before {
+
     content: "";
 
     position: absolute;
@@ -740,17 +656,51 @@ section h2 {
         1px solid
         rgba(210,225,245,0.08);
 
+    pointer-events: none;
+
+    transition:
+        transform 0.5s ease,
+        border-color 0.5s ease;
+}
+
+
+/* INNER GLOW */
+
+.committee-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    left: -120px;
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(190,215,240,0.025);
+
+    filter: blur(20px);
+
+    pointer-events: none;
+
     transition:
         transform 0.5s ease;
 }
 
 
-/* HOVER ANIMATION */
+/* =========================
+   COMMITTEE HOVER
+========================= */
 
 .committee-card:hover {
+
     transform:
         translateY(-8px)
-        scale(1.04);
+        scale(1.045);
 
     border-color:
         rgba(220,235,250,0.32);
@@ -758,39 +708,59 @@ section h2 {
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,0.075),
+            rgba(255,255,255,0.085),
             rgba(255,255,255,0.025)
         );
 
     box-shadow:
         0 25px 60px
-        rgba(0,0,0,0.45);
+        rgba(0,0,0,0.40);
 }
 
 
 .committee-card:hover::before {
+
     transform:
-        scale(1.25)
-        rotate(20deg);
+        scale(1.25);
+
+    border-color:
+        rgba(220,235,250,0.14);
 }
 
 
-/* NUMBER */
+.committee-card:hover::after {
+
+    transform:
+        scale(1.5);
+}
+
+
+/* =========================
+   COMMITTEE NUMBER
+========================= */
 
 .committee-number {
+
     font-size: 12px;
 
     letter-spacing: 3px;
 
     color: #718092;
 
-    margin-bottom: 25px;
+    margin-bottom: 22px;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 
-/* COMMITTEE NAME */
+/* =========================
+   COMMITTEE TITLE
+========================= */
 
 .committee-card h3 {
+
     font-size: 21px;
 
     line-height: 1.35;
@@ -799,13 +769,20 @@ section h2 {
 
     color: #f4f7fb;
 
-    max-width: 92%;
+    max-width: 95%;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 
-/* COMMITTEE TAGS */
+/* =========================
+   COMMITTEE BADGES
+========================= */
 
-.committee-tags {
+.committee-badges {
+
     display: flex;
 
     flex-wrap: wrap;
@@ -813,19 +790,26 @@ section h2 {
     gap: 8px;
 
     margin-top: 20px;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 
-/* COMPULSORY BADGE */
+.compulsory,
+.dual {
 
-.compulsory {
     display: inline-flex;
 
     align-items: center;
 
+    gap: 6px;
+
     width: fit-content;
 
-    padding: 7px 11px;
+    padding:
+        6px 10px;
 
     border:
         1px solid
@@ -842,48 +826,36 @@ section h2 {
 
     font-weight: 700;
 
-    letter-spacing: 1.3px;
+    letter-spacing: 1.5px;
 }
 
 
-/* DUAL DELEGATE BADGE */
+/* =========================
+   STUDY GUIDE
+========================= */
 
-.dual-badge {
+.study-guide {
+
     display: inline-flex;
 
     align-items: center;
 
+    justify-content: center;
+
     width: fit-content;
 
-    padding: 7px 11px;
+    margin-top: 22px;
+
+    padding:
+        9px 13px;
 
     border:
         1px solid
-        rgba(180,210,235,0.16);
+        rgba(220,235,250,0.14);
 
-    border-radius: 999px;
+    border-radius: 8px;
 
-    background:
-        rgba(180,210,235,0.05);
-
-    color: #b7c8d8;
-
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: 1.3px;
-}
-
-
-/* STUDY GUIDE LINK */
-
-.study-guide {
-    margin-top: auto;
-
-    padding-top: 28px;
-
-    color: #dce9f5;
+    color: #aebed0;
 
     text-decoration: none;
 
@@ -891,58 +863,89 @@ section h2 {
 
     font-weight: 700;
 
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
+
+    background:
+        rgba(255,255,255,0.025);
+
+    position: relative;
+
+    z-index: 5;
 
     transition:
-        transform 0.3s ease,
-        color 0.3s ease;
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
 }
 
+
 .study-guide:hover {
-    color: white;
+
+    background: #eaf4ff;
+
+    color: #05070a;
+
+    border-color: #eaf4ff;
 
     transform:
-        translateX(6px);
+        translateY(-2px);
 }
 
 
 /* =========================
-   TEAM
+   CONTACT
 ========================= */
 
 .team-grid {
+
     max-width: 1000px;
 
-    margin: 60px auto 0;
+    margin:
+        60px auto 0;
 
     display: grid;
 
     grid-template-columns:
-        repeat(2, 1fr);
+        repeat(2,1fr);
 
     gap: 20px;
 }
 
+
 .person {
+
     padding: 40px;
 
     border:
         1px solid
         rgba(255,255,255,0.08);
 
+    background:
+        rgba(255,255,255,0.015);
+
     transition:
         transform 0.4s ease,
-        border-color 0.4s ease;
+        border-color 0.4s ease,
+        background 0.4s ease;
 }
 
+
 .person:hover {
-    transform: translateY(-6px);
+
+    transform:
+        translateY(-6px);
 
     border-color:
         rgba(220,235,250,0.25);
+
+    background:
+        rgba(255,255,255,0.03);
 }
 
+
 .person .role {
+
     color: #8291a3;
 
     letter-spacing: 3px;
@@ -950,10 +953,41 @@ section h2 {
     font-size: 12px;
 }
 
+
 .person h3 {
+
     margin-top: 14px;
 
-    font-size: 28px;
+    font-size: 26px;
+
+    letter-spacing: 1px;
+}
+
+
+.person .phone {
+
+    display: block;
+
+    margin-top: 15px;
+
+    color: #aebed0;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.person .phone:hover {
+
+    color: #eaf4ff;
+
 }
 
 
@@ -962,9 +996,11 @@ section h2 {
 ========================= */
 
 .conduct-box {
+
     max-width: 850px;
 
-    margin: 50px auto 0;
+    margin:
+        50px auto 0;
 
     padding: 45px;
 
@@ -976,7 +1012,9 @@ section h2 {
         rgba(255,255,255,0.015);
 }
 
+
 .conduct-box p {
+
     color: #929eac;
 
     line-height: 1.8;
@@ -984,7 +1022,9 @@ section h2 {
     margin-bottom: 25px;
 }
 
+
 .conduct-link {
+
     color: #eaf4ff;
 
     text-decoration: none;
@@ -993,19 +1033,32 @@ section h2 {
         1px solid #eaf4ff;
 
     padding-bottom: 5px;
+
+    transition:
+        opacity 0.3s ease;
+}
+
+
+.conduct-link:hover {
+
+    opacity: 0.7;
 }
 
 
 /* =========================
-   REGISTRATION
+   REGISTER
 ========================= */
 
 .register-section {
+
     padding-top: 150px;
+
     padding-bottom: 150px;
 }
 
+
 .register-section .button {
+
     margin-top: 35px;
 }
 
@@ -1015,7 +1068,9 @@ section h2 {
 ========================= */
 
 footer {
-    padding: 45px 8%;
+
+    padding:
+        45px 8%;
 
     border-top:
         1px solid
@@ -1024,6 +1079,7 @@ footer {
     display: flex;
 
     justify-content: space-between;
+
     align-items: center;
 
     color: #6f7b89;
@@ -1037,6 +1093,7 @@ footer {
 ========================= */
 
 .reveal {
+
     opacity: 0;
 
     transform:
@@ -1047,7 +1104,9 @@ footer {
         transform 0.8s ease;
 }
 
+
 .reveal.visible {
+
     opacity: 1;
 
     transform:
@@ -1062,17 +1121,21 @@ footer {
 @keyframes fadeUp {
 
     from {
+
         opacity: 0;
 
         transform:
             translateY(25px);
+
     }
 
     to {
+
         opacity: 1;
 
         transform:
             translateY(0);
+
     }
 
 }
@@ -1085,108 +1148,126 @@ footer {
 @media(max-width:800px) {
 
     nav {
-        padding: 15px 5%;
+
+        padding:
+            15px 5%;
     }
 
+
     .nav-links {
+
         display: none;
     }
 
+
     .logo-text {
+
         font-size: 16px;
+
         letter-spacing: 2px;
     }
 
+
     .nav-logo img {
+
         width: 40px;
         height: 40px;
     }
 
+
     .hero {
+
         padding:
             140px 6% 100px;
     }
 
+
     .hero-logo {
+
         width: 115px;
         height: 115px;
     }
 
+
     .hero h1 {
+
         letter-spacing: -5px;
     }
 
-    .orbit-system {
-        width: 450px;
-        height: 450px;
-
-        right: -220px;
-
-        opacity: 0.45;
-    }
-
-    .orbit-one {
-        width: 360px;
-        height: 360px;
-
-        top: 45px;
-        left: 45px;
-    }
-
-    .orbit-two {
-        width: 250px;
-        height: 250px;
-
-        top: 100px;
-        left: 100px;
-    }
-
-    .orbit-three {
-        width: 150px;
-        height: 150px;
-
-        top: 150px;
-        left: 150px;
-    }
-
-    .orbit-center {
-        width: 110px;
-        height: 110px;
-
-        font-size: 42px;
-    }
 
     section {
-        padding: 90px 6%;
+
+        padding:
+            90px 6%;
     }
+
 
     .event-grid,
     .team-grid,
     .committee-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
     }
 
+
     .event-card {
+
         padding: 35px;
     }
 
+
     .committee-card {
+
         min-height: 220px;
+
         padding: 28px;
     }
 
+
     .committee-card:hover {
+
         transform:
             translateY(-5px)
             scale(1.02);
     }
 
+
+    .person {
+
+        padding: 35px 25px;
+    }
+
+
     footer {
+
         flex-direction: column;
 
         gap: 12px;
 
         text-align: center;
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
     }
 
 }
@@ -1240,8 +1321,8 @@ footer {
         </li>
 
         <li>
-            <a href="#team">
-                Team
+            <a href="#contact">
+                Contact
             </a>
         </li>
 
@@ -1288,7 +1369,7 @@ footer {
 
             JTMUN<br>
 
-            <span>XII.</span>
+            <span>XII</span>
 
         </h1>
 
@@ -1318,38 +1399,6 @@ footer {
                 EXPLORE
             </a>
 
-        </div>
-
-    </div>
-
-
-    <!-- ORBIT SYSTEM -->
-
-    <div class="orbit-system">
-
-        <div class="orbit-one">
-
-            <div class="orbit-dot dot-one"></div>
-
-        </div>
-
-
-        <div class="orbit-two">
-
-            <div class="orbit-dot dot-two"></div>
-
-        </div>
-
-
-        <div class="orbit-three">
-
-            <div class="orbit-dot dot-three"></div>
-
-        </div>
-
-
-        <div class="orbit-center">
-            XII
         </div>
 
     </div>
@@ -1475,36 +1524,40 @@ footer {
 
         <!-- =========================
              01 — UNSC
-        ========================== -->
+        ========================= -->
 
         <div class="committee-card reveal">
 
-            <div class="committee-number">
-                01
-            </div>
+            <div>
 
-            <h3>
-                United Nations Security Council (UNSC)
-            </h3>
-
-
-            <div class="committee-tags">
-
-                <div class="compulsory">
-                    ⭐ COMPULSORY
+                <div class="committee-number">
+                    01
                 </div>
 
-                <div class="dual-badge">
-                    DUAL DELEGATE
+                <h3>
+                    United Nations Security Council (UNSC)
+                </h3>
+
+
+                <div class="committee-badges">
+
+                    <div class="compulsory">
+                        COMPULSORY
+                    </div>
+
+                    <div class="dual">
+                        DUAL COMMITTEE
+                    </div>
+
                 </div>
 
             </div>
 
 
-            <!-- Change stay-tuned.html to unscstudyguide.pdf later -->
+            <!-- CHANGE THIS LINK LATER -->
 
             <a
-                href="stay-tuned.html"
+                href="staytuned.html"
                 class="study-guide"
             >
                 STUDY GUIDE →
@@ -1515,32 +1568,36 @@ footer {
 
         <!-- =========================
              02 — GLOBAL CRISIS CABINET
-        ========================== -->
+        ========================= -->
 
         <div class="committee-card reveal">
 
-            <div class="committee-number">
-                02
-            </div>
+            <div>
 
-            <h3>
-                Global Crisis Cabinet
-            </h3>
+                <div class="committee-number">
+                    02
+                </div>
+
+                <h3>
+                    Global Crisis Cabinet
+                </h3>
 
 
-            <div class="committee-tags">
+                <div class="committee-badges">
 
-                <div class="compulsory">
-                    ⭐ COMPULSORY
+                    <div class="compulsory">
+                        COMPULSORY
+                    </div>
+
                 </div>
 
             </div>
 
 
-            <!-- Change later to globalcrisisstudyguide.pdf -->
+            <!-- CHANGE THIS LINK LATER -->
 
             <a
-                href="stay-tuned.html"
+                href="staytuned.html"
                 class="study-guide"
             >
                 STUDY GUIDE →
@@ -1551,23 +1608,27 @@ footer {
 
         <!-- =========================
              03 — EASTERN EUROPE
-        ========================== -->
+        ========================= -->
 
         <div class="committee-card reveal">
 
-            <div class="committee-number">
-                03
+            <div>
+
+                <div class="committee-number">
+                    03
+                </div>
+
+                <h3>
+                    Eastern Europe High Command
+                </h3>
+
             </div>
 
-            <h3>
-                Eastern Europe High Command
-            </h3>
 
-
-            <!-- Change later to easterneuropestudyguide.pdf -->
+            <!-- CHANGE THIS LINK LATER -->
 
             <a
-                href="stay-tuned.html"
+                href="staytuned.html"
                 class="study-guide"
             >
                 STUDY GUIDE →
@@ -1578,23 +1639,27 @@ footer {
 
         <!-- =========================
              04 — OAS
-        ========================== -->
+        ========================= -->
 
         <div class="committee-card reveal">
 
-            <div class="committee-number">
-                04
+            <div>
+
+                <div class="committee-number">
+                    04
+                </div>
+
+                <h3>
+                    Organisation of American States
+                </h3>
+
             </div>
 
-            <h3>
-                Organisation of American States
-            </h3>
 
-
-            <!-- Change later to oasstudyguide.pdf -->
+            <!-- CHANGE THIS LINK LATER -->
 
             <a
-                href="stay-tuned.html"
+                href="staytuned.html"
                 class="study-guide"
             >
                 STUDY GUIDE →
@@ -1604,24 +1669,28 @@ footer {
 
 
         <!-- =========================
-             05 — ALL PARTIES CONFERENCE
-        ========================== -->
+             05 — ALL PARTIES
+        ========================= -->
 
         <div class="committee-card reveal">
 
-            <div class="committee-number">
-                05
+            <div>
+
+                <div class="committee-number">
+                    05
+                </div>
+
+                <h3>
+                    All Parties Conference
+                </h3>
+
             </div>
 
-            <h3>
-                All Parties Conference
-            </h3>
 
-
-            <!-- Change later to allpartiesstudyguide.pdf -->
+            <!-- CHANGE THIS LINK LATER -->
 
             <a
-                href="stay-tuned.html"
+                href="staytuned.html"
                 class="study-guide"
             >
                 STUDY GUIDE →
@@ -1632,23 +1701,27 @@ footer {
 
         <!-- =========================
              06 — WORLD BANK
-        ========================== -->
+        ========================= -->
 
         <div class="committee-card reveal">
 
-            <div class="committee-number">
-                06
+            <div>
+
+                <div class="committee-number">
+                    06
+                </div>
+
+                <h3>
+                    World Bank
+                </h3>
+
             </div>
 
-            <h3>
-                World Bank
-            </h3>
 
-
-            <!-- Change later to worldbankstudyguide.pdf -->
+            <!-- CHANGE THIS LINK LATER -->
 
             <a
-                href="stay-tuned.html"
+                href="staytuned.html"
                 class="study-guide"
             >
                 STUDY GUIDE →
@@ -1659,23 +1732,27 @@ footer {
 
         <!-- =========================
              07 — SOCHUM
-        ========================== -->
+        ========================= -->
 
         <div class="committee-card reveal">
 
-            <div class="committee-number">
-                07
+            <div>
+
+                <div class="committee-number">
+                    07
+                </div>
+
+                <h3>
+                    SOCHUM
+                </h3>
+
             </div>
 
-            <h3>
-                SOCHUM
-            </h3>
 
-
-            <!-- Change later to sochumstudyguide.pdf -->
+            <!-- CHANGE THIS LINK LATER -->
 
             <a
-                href="stay-tuned.html"
+                href="staytuned.html"
                 class="study-guide"
             >
                 STUDY GUIDE →
@@ -1686,23 +1763,27 @@ footer {
 
         <!-- =========================
              08 — SPECPOL
-        ========================== -->
+        ========================= -->
 
         <div class="committee-card reveal">
 
-            <div class="committee-number">
-                08
+            <div>
+
+                <div class="committee-number">
+                    08
+                </div>
+
+                <h3>
+                    SPECPOL
+                </h3>
+
             </div>
 
-            <h3>
-                SPECPOL
-            </h3>
 
-
-            <!-- Change later to specpolstudyguide.pdf -->
+            <!-- CHANGE THIS LINK LATER -->
 
             <a
-                href="stay-tuned.html"
+                href="staytuned.html"
                 class="study-guide"
             >
                 STUDY GUIDE →
@@ -1713,23 +1794,27 @@ footer {
 
         <!-- =========================
              09 — DISEC
-        ========================== -->
+        ========================= -->
 
         <div class="committee-card reveal">
 
-            <div class="committee-number">
-                09
+            <div>
+
+                <div class="committee-number">
+                    09
+                </div>
+
+                <h3>
+                    DISEC
+                </h3>
+
             </div>
 
-            <h3>
-                DISEC
-            </h3>
 
-
-            <!-- Change later to disecstudyguide.pdf -->
+            <!-- CHANGE THIS LINK LATER -->
 
             <a
-                href="stay-tuned.html"
+                href="staytuned.html"
                 class="study-guide"
             >
                 STUDY GUIDE →
@@ -1737,25 +1822,34 @@ footer {
 
         </div>
 
-
     </div>
 
 </section>
 
 
 <!-- =========================
-     TEAM
+     CONTACT
 ========================= -->
 
-<section id="team">
+<section id="contact">
 
     <h2 class="reveal">
-        Meet the Team
+        Contact
     </h2>
+
+
+    <p class="section-text reveal">
+
+        For enquiries regarding JTMUN XII,
+        please contact the Secretariat.
+
+    </p>
 
 
     <div class="team-grid">
 
+
+        <!-- ABDULLAH -->
 
         <div class="person reveal">
 
@@ -1768,8 +1862,18 @@ footer {
                 Abdullah Majeed
             </h3>
 
+
+            <a
+                href="tel:+923104855122"
+                class="phone"
+            >
+                +92 310 4855122
+            </a>
+
         </div>
 
+
+        <!-- IBRAHIM -->
 
         <div class="person reveal">
 
@@ -1781,6 +1885,14 @@ footer {
             <h3>
                 Ibrahim Jabran
             </h3>
+
+
+            <a
+                href="tel:+923008090909"
+                class="phone"
+            >
+                +92 300 8090909
+            </a>
 
         </div>
 
@@ -1814,6 +1926,7 @@ footer {
         <a
             href="code-of-conduct.pdf"
             target="_blank"
+            rel="noopener noreferrer"
             class="conduct-link"
         >
             VIEW CODE OF CONDUCT
@@ -1892,10 +2005,6 @@ const observer =
                         "visible"
                     );
 
-                    observer.unobserve(
-                        entry.target
-                    );
-
                 }
 
             });
@@ -1919,7 +2028,7 @@ document
 
 
 /* =========================
-   FLOATING BACKGROUND CIRCLES
+   FLOATING CIRCLES
 ========================= */
 
 const circles = [];
@@ -1939,16 +2048,13 @@ for (
         "fixed";
 
 
-    const size =
-        Math.random() * 5 + 2;
-
-
     circle.style.width =
-        size + "px";
+        (Math.random() * 5 + 2)
+        + "px";
 
 
     circle.style.height =
-        size + "px";
+        circle.style.width;
 
 
     circle.style.border =
@@ -1985,10 +2091,14 @@ for (
 }
 
 
+/* =========================
+   ANIMATE CIRCLES
+========================= */
+
 function animateCircles() {
 
     circles.forEach(
-        (circle, index) => {
+        (circle,index) => {
 
             const time =
                 Date.now() / 3000;
@@ -2024,7 +2134,7 @@ animateCircles();
 
 </script>
 
-
 </body>
 
 </html>
+```
